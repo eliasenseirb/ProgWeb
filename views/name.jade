@@ -1,0 +1,8 @@
+extends layout
+block body
+    if(name)
+      h1= "Bonjour " + name
+    else
+        form(action="/name" method="POST")
+            input(type="text" name="nameSent" placeholder="Prénom")
+            input(type="submit" value="Envoyer les données")
